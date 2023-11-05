@@ -22,3 +22,53 @@
     </div>
 
 </div>
+
+<div *ngIf="web3.planet2" class="blockPlanet">
+    <div class="spot" *ngIf="web3.planet2.currentAddress != '0x0000000000000000000000000000000000000000'">
+        <img src="../../assets/PlaceHasAName.png" alt="We have an owner">
+        <div>
+            <h2>{{web3.planet2.currentName}} ( {{web3.planet2.serverAddress}} )</h2>
+            <p>{{web3.planet2.currentAddress}} </p>
+            <p>( {{web3.planet2.tokenAmount}} {{web3.planet2.symbol}} )</p>
+            <progress *ngIf="web3.planet2.timeControlled <= 30" class="miningProgress"
+                value="{{web3.planet2.timeControlled}}" max="30"></progress>
+            <p *ngIf="web3.planet2.timeControlled > 30">💎 Mining In Progress!!! 💎</p>
+
+        </div>
+
+    </div>
+
+    <div class="spot" *ngIf="web3.planet2.currentAddress == '0x0000000000000000000000000000000000000000'">
+        <img src="../../assets/NoOneHome.png" alt="Empty Spot">
+        <div class="emptySpot">
+            <h2>{{web3.planet2.serverAddress}}</h2>
+            <p>Free land to a good owner.</p>
+        </div>
+    </div>
+
+</div>
+
+<div *ngIf="web3.planet3" class="blockPlanet">
+    <div class="spot" *ngIf="web3.planet3.currentAddress != '0x0000000000000000000000000000000000000000'">
+        <img src="../../assets/PlaceHasAName.png" alt="We have an owner">
+        <div>
+            <h2>{{web3.planet3.currentName}} ( {{web3.planet3.serverAddress}} )</h2>
+            <p>{{web3.planet3.currentAddress}} </p>
+            <p>( {{web3.planet3.tokenAmount}} {{web3.planet3.symbol}} )</p>
+            <progress *ngIf="web3.planet3.timeControlled <= 30" class="miningProgress"
+                value="{{web3.planet3.timeControlled}}" max="30"></progress>
+            <p *ngIf="web3.planet3.timeControlled > 30">💎 Mining In Progress!!! 💎</p>
+
+        </div>
+
+    </div>
+
+    <div class="spot" *ngIf="web3.planet3.currentAddress == '0x0000000000000000000000000000000000000000'">
+        <img src="../../assets/NoOneHome.png" alt="Empty Spot">
+        <div class="emptySpot">
+            <h2>{{web3.planet3.serverAddress}}</h2>
+            <p>Free land to a good owner.</p>
+        </div>
+    </div>
+
+</div>

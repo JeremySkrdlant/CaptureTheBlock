@@ -8,6 +8,8 @@ import { Web3Service } from '../web3.service';
 })
 export class BlockStatViewComponent implements OnInit {
 
+
+
   constructor(public web3: Web3Service) { }
 
   ngOnInit(): void {
