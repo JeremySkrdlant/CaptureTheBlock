@@ -13,6 +13,8 @@ export class Step1Component implements OnInit {
   instructions3 = "";
   fullInstructions = "We need a wallet! Open a new browser tab and go to metamask.io and install a wallet.  It will be a chrome extension and will require you to create a new wallet.  Ask one of the helpers if you get stuck. Reload this page once you have metamask installed."
   fullInstructions2 = "Now we need to join the correct network.  Go into your extensions, click metamask, choose networks on the upper left side, Choose add a network. Go to the far bottom and choose Add Custom Network. Then put in the following stats."
+  fullInstructions3 = "You need money to make money. We will give you some starter cash using a tool that is known as a faucet.  They do not exist on the main net but they are common on test networks so that you can debug your code. "
+
   networkName = "checking"
   networkRPC = "..."
   showTable = false;
@@ -27,6 +29,9 @@ export class Step1Component implements OnInit {
         }
         if (changeNumber == 2) {
           this.instructions2 += newOne;
+        }
+        if (changeNumber == 3) {
+          this.instructions3 += newOne;
         }
 
         character += 1;
@@ -53,6 +58,12 @@ export class Step1Component implements OnInit {
         this.showTable = true;
       })
     this.getChosenNetwork();
+  }
+
+  verify() {
+    this.instructions3 = "";
+    this.web3.checkForSuccessfulWallet()
+    this.typeOut(this.fullInstructions3, 3);
   }
 
   ngOnInit(): void {

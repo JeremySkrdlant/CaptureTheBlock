@@ -22,10 +22,14 @@ export class Web3Service {
 
   async listenToEvents() {
     this.contract.on("NewOwner", (owner, name: string) => {
+      console.log("We have a new Owner");
+
       if (this.timer1) {
         clearInterval(this.timer1);
       }
-      this.updateStats();
+      setTimeout(() => {
+        this.updateStats();
+      }, 300)
       this.timer1 = setInterval(() => {
         this.planet1!.timeControlled += 1;
         if (this.planet1!.timeControlled > 35) {

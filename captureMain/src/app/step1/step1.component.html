@@ -28,10 +28,10 @@
             <td>Leave this blank.</td>
         </tr>
     </table>
-    <button *ngIf="showTable" (click)="web3.checkForSuccessfulWallet()">Verify Your Account</button>
+    <button *ngIf="showTable" (click)="verify()">Verify Your Account</button>
 </div>
 
-<div>
+<div *ngIf="web3.walletStatus == 'Correctly Connected'">
     <h2>Money Faucets</h2>
     <p>{{instructions3}}</p>
     <button (click)="web3.getMoneyFromTheFaucet()">Crank Open the Faucet!</button>

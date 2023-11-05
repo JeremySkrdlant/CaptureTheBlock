@@ -1,7 +1,26 @@
 <header>
     <h2>Rules of the Game</h2>
     <p>This is not Nam, this is bowling, there are rules</p>
-    <p>-- Walter from the Big Lebowski</p>
+    <p>-- Walter from The Big Lebowski</p>
 </header>
+<section>
+    <h3>Base Play</h3>
+    <ul>
+        <li>Conquering a Node costs you 1 token</li>
+        <li>If you maintain a node for 30 seconds and press the easy button, you get 5 tokens</li>
+        <li>Freezing another account costs you one token</li>
+        <li>Your goal is to take over all 3 networks</li>
+    </ul>
 
-<button (click)="web3.stepNumber = 3">Start The Game</button>
+    <h3>Being Frozen</h3>
+    <p>Freezing doesn't work automatically, You need to hardcode the address in and implement the contract call in the
+        web3.service.ts file.</p>
+    <ul>
+        <li>You can not conquer a node while frozen</li>
+        <li>You can not collect tokens while frozen</li>
+        <li>You can freeze other accounts while frozen</li>
+        <li>The freeze only affects the current network. You can switch to other networks to not be frozen.</li>
+    </ul>
+
+    <button (click)="web3.stepNumber = 3">Start The Game</button>
+</section>

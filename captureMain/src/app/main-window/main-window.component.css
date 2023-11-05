@@ -12,12 +12,24 @@ main {
     flex-direction: row;
 }
 
-#BigButton {
+#OtherInfo {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+#FreezeButton {
+    background-color: rgb(85, 153, 255);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
 
 img {
     width: 80%;

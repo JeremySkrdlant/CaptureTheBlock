@@ -1,9 +1,14 @@
 <main>
     <app-your-tokens></app-your-tokens>
-    <section id="BigButton">
-        <button (click)="captureBlock()">
-            <img src="../../assets/easy.png" alt="easyButton">
-        </button>
+    <section id="OtherInfo">
+        <section id="BigButton">
+            <button (click)="captureBlock()">
+                <img src="../../assets/easy.png" alt="easyButton">
+            </button>
+        </section>
+
+        <button id="FreezeButton" (click)="web3.freezeCompetitor()">🍦</button>
     </section>
+
 
 </main>
