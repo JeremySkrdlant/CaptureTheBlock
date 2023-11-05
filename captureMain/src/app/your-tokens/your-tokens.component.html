@@ -1,0 +1,17 @@
+<div id="myStats">
+    <p class="label">Your Wallet Address</p>
+    <p class="address">{{web3.condensedAddress}}</p>
+    <div id="tokenArea">
+        <p>{{web3.tokenBalance}}</p>
+        <p>{{web3.tokenSymbol}}</p>
+    </div>
+
+    <img src="../../assets/electricalTape.png" alt="Tape to Hold this ship together!">
+    <div id="ethArea">
+        <p>{{web3.ethBalance}}</p>
+        <p>NT</p>
+    </div>
+
+    <p id="freezeLight" [class.frozen]="web3.isFrozen">Account Frozen</p>
+    <p id="ownLight" [class.owned]="web3.isOwner">This is Yours</p>
+</div>

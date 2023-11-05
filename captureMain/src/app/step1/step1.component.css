@@ -1,0 +1,17 @@
+div {
+    padding: 20px;
+}
+
+p {
+    max-width: 600px;
+}
+
+td:first-child {
+    text-align: right;
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+td:last-child {
+    color: #fff;
+}

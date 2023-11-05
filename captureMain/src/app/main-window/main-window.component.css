@@ -1,0 +1,25 @@
+button {
+    all: unset;
+}
+
+button:active {
+    background-color: #999;
+    border-radius: 50%;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+#BigButton {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 80%;
+    max-width: 400px;
+}

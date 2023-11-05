@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "hardhat": "^2.19.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0"
+  },
+  "scripts": {
+    "compile": "npx hardhat compile; rm -rf ../captureTV/src/artifacts; cp -r ./artifacts ../captureTV/src/artifacts; rm -rf ../captureMain/src/artifacts; cp -r ./artifacts ../captureMain/src/artifacts;rm -rf ../captureBackend/artifacts; cp -r ./artifacts ../captureBackend/artifacts;",
+    "deploy": "npx hardhat run ./scripts/deploy.ts",
+    "node": "npx hardhat node"
+  }
+}

@@ -1,0 +1,98 @@
+#myStats {
+    border-radius: 10;
+    background-color: #222;
+    margin: 10px;
+    border: 1px solid greenyellow;
+    padding: 10px;
+    width: 200px;
+}
+
+#tokenArea,
+#ethArea {
+    display: flex;
+    flex-direction: row;
+}
+
+#tokenArea p,
+#ethArea p {
+    margin-top: 0px;
+}
+
+#tokenArea p:first-child,
+#ethArea p:first-child {
+    flex: 1;
+    letter-spacing: 12px;
+    font-size: 25px;
+    padding-left: 5px;
+    color: black;
+    background: repeating-linear-gradient(90deg, #ffffff, #ffffff calc(1ch + 10px), #000000 calc(1ch + 10px), #000000 calc(1ch + 12px));
+    box-shadow: 0px 0px 4px #000 inset;
+
+}
+
+img {
+    position: relative;
+    top: -10px;
+}
+
+#tokenArea p:last-child,
+#ethArea p:last-child {
+    width: 80px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #ffff;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-family: sans-serif;
+
+}
+
+.address {
+    margin-top: 0px;
+    padding: 5px 0px;
+    text-align: center;
+    background-color: #000;
+    text-shadow: 0px 0px 5px rgba(206, 255, 133, 0.833);
+    border: 2px solid #333;
+    box-shadow: 0px 0px 2px rgba(206, 255, 133, 0.833) inset;
+}
+
+.label {
+    margin: 0px;
+    font-size: 8px;
+}
+
+#freezeLight,
+#ownLight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    border: 3px solid #000a7a;
+    border-radius: 5px;
+    padding: 10px 0px;
+    margin-top: 5px;
+}
+
+#freezeLight {
+    border: 3px solid #000a7a;
+    background-color: #00064a;
+}
+
+#ownLight {
+    border: 3px solid #6e7101;
+    background-color: #343601;
+}
+
+.frozen {
+    background-color: #8D96FF !important;
+    box-shadow: 0px 0px 10px #fff inset;
+}
+
+.owned {
+    background-color: #f9ff8d !important;
+    box-shadow: 0px 0px 10px #fff inset;
+}

@@ -1,0 +1,24 @@
+<div *ngIf="web3.planet1" class="blockPlanet">
+    <div class="spot" *ngIf="web3.planet1.currentAddress != '0x0000000000000000000000000000000000000000'">
+        <img src="../../assets/PlaceHasAName.png" alt="We have an owner">
+        <div>
+            <h2>{{web3.planet1.currentName}} ( {{web3.planet1.serverAddress}} )</h2>
+            <p>{{web3.planet1.currentAddress}} </p>
+            <p>( {{web3.planet1.tokenAmount}} {{web3.planet1.symbol}} )</p>
+            <progress *ngIf="web3.planet1.timeControlled <= 30" class="miningProgress"
+                value="{{web3.planet1.timeControlled}}" max="30"></progress>
+            <p *ngIf="web3.planet1.timeControlled > 30">💎 Mining In Progress!!! 💎</p>
+
+        </div>
+
+    </div>
+
+    <div class="spot" *ngIf="web3.planet1.currentAddress == '0x0000000000000000000000000000000000000000'">
+        <img src="../../assets/NoOneHome.png" alt="Empty Spot">
+        <div class="emptySpot">
+            <h2>{{web3.planet1.serverAddress}}</h2>
+            <p>Free land to a good owner.</p>
+        </div>
+    </div>
+
+</div>

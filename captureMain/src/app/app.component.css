@@ -1,0 +1,11 @@
+@font-face {
+    font-family: Orbitron;
+    src: url("../assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
+}
+
+h1 {
+    font-family: Orbitron;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+}
