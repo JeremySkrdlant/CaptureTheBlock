@@ -5,6 +5,9 @@ To run this project, you will install the contract on 3 different servers.
 currently it runs just on localhost but there are stubs to set it up to run 
 on three sepereate networks. 
 ```
+npm run compile
+npm run node
+//In a new window
 npm run deploy
 ```
 
